@@ -1,0 +1,23 @@
+{
+  "name": "focus-pomodoro",
+  "version": "1.0.0",
+  "description": "Simple app to increase productivity",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norbat-dev/focus-pomodoro.git"
+  },
+  "author": "Norbert Witkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/norbat-dev/focus-pomodoro/issues"
+  },
+  "homepage": "https://github.com/norbat-dev/focus-pomodoro#readme",
+  "devDependencies": {
+    "electron": "^36.4.0"
+  }
+}
