@@ -19,3 +19,33 @@ body{
         }
     }
 }
+
+.task-item{
+    display: flex;
+    $self: &;
+    &__text{
+
+    }
+    &__controll{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    &__time{
+        display: none;
+    }
+    &__btn{
+        font-size: 0.75rem;
+        border: 1px solid black;
+        padding: 2px 4px;
+    }
+    &:hover{
+        #{$self}__controll{
+            display: flex;
+        }
+        #{$self}__wrapper{
+            display: none;
+        }
+    }
+}
