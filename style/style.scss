@@ -1,0 +1,21 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-list{
+    margin: 0 0 1rem 0;
+    padding: 0;
+    list-style: none;
+    &__item{
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid gray;
+        &:hover{
+            background-color: gray;
+            color: white;
+        }
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+}
