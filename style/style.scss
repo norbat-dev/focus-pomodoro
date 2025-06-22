@@ -82,3 +82,29 @@ body{
     color: #C2C2C2;
     font-weight: 600;
 }
+
+
+.add-task{
+    &__wrapper{
+        padding: .5rem;
+        border-radius: 6px;
+        border: 1px solid #414141;
+    }
+    &__input{
+        border-radius: 6px;
+        padding: .5rem;
+        background-color: #414141;
+        border: none;
+        color: white;
+    }
+    &__submit{
+        font-size: 1rem;
+        padding: 4px 8px;
+        background-color: #838383;
+        border-radius: 55px;
+        margin: 0 2px;
+        border: none;
+        color: white;
+        font-weight: 600;
+    }
+}

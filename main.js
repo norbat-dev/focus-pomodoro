@@ -30,6 +30,14 @@ app.whenReady().then(async () => {
         return os.userInfo().username;
     });
 
+    ipcMain.handle('add-task', async (event, title) => {
+        try {
+            await db.addNewTask(title);
+        } catch (err) {
+            console.error('Błąd bazy danych:', err);
+        }
+    });
+
     createWindow()
 
 
