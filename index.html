@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Focus Pomodoro</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -21,10 +24,16 @@
                 </div>
                 <div class="task-item__controll">
                     <div class="task-item__btn task-item__play-pause">
-                        &gt;
+                        <img height="16" width="16" class="task-item__icon" src="./assets/play.svg" alt="">
+                        <span class="task-item__icon-description">Start</span>
                     </div>
                     <div class="task-item__btn task-item__done">
-                        Done
+                        <img height="16" width="16" class="task-item__icon" src="./assets/check-square.svg" alt="">
+                        <span class="task-item__icon-description">Done</span>
+                    </div>
+                    <div class="task-item__btn task-item__delete">
+                        <img height="16" width="16" class="task-item__icon" src="./assets/trash.svg" alt="">
+                        <span class="task-item__icon-description">Delete</span>
                     </div>
                 </div>
             </li>
@@ -39,10 +48,16 @@
                 </div>
                 <div class="task-item__controll">
                     <div class="task-item__btn task-item__play-pause">
-                        &gt;
+                        <img height="16" width="16" class="task-item__icon" src="./assets/play.svg" alt="">
+                        <span class="task-item__icon-description">Start</span>
                     </div>
                     <div class="task-item__btn task-item__done">
-                        Done
+                        <img height="16" width="16" class="task-item__icon" src="./assets/check-square.svg" alt="">
+                        <span class="task-item__icon-description">Done</span>
+                    </div>
+                    <div class="task-item__btn task-item__delete">
+                        <img height="16" width="16" class="task-item__icon" src="./assets/trash.svg" alt="">
+                        <span class="task-item__icon-description">Delete</span>
                     </div>
                 </div>
             </li>
@@ -50,7 +65,7 @@
     </div>
     <div class="add-task-wrapper">
         <button class="add-task">
-            + add task
+            + ADD TASK
         </button>
     </div>
 

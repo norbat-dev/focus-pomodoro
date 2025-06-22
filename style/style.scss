@@ -1,5 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #2A2A2A;
+    color: #ffffff;
+    padding: 1rem;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
 }
 
 .task-list{
@@ -8,10 +13,10 @@ body{
     list-style: none;
     &__item{
         padding: 1rem;
-        border-radius: 5px;
-        border: 1px solid gray;
+        border-radius: 6px;
+        border: 1px solid #414141;
         &:hover{
-            background-color: gray;
+            background-color: #414141;
             color: white;
         }
         &:not(:last-child){
@@ -35,17 +40,45 @@ body{
     &__time{
         display: none;
     }
+    &__icon{
+
+    }
+    &__icon-description{
+        display: none;
+    }
     &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 0.75rem;
-        border: 1px solid black;
-        padding: 2px 4px;
+        padding: 4px 8px;
+        background-color: #838383;
+        border-radius: 55px;
+        margin: 0 2px;
+        &:hover{
+            #{$self}__icon-description{
+                display: block;
+            }   
+            #{$self}__icon{
+                margin-right: 5px;
+            }    
+        }
     }
     &:hover{
+        align-items: center;
+        justify-content: center;
         #{$self}__controll{
             display: flex;
         }
         #{$self}__wrapper{
             display: none;
         }
+        
+        
     }
+}
+
+.add-task{
+    color: #C2C2C2;
+    font-weight: 600;
 }
