@@ -12,55 +12,33 @@
 <body>
     <h1>Hi, <span id="user-name">{#name}</span>! 👋</h1>
     <div class="task-list-wrapper">
-        <ul class="task-list">
-            <li class="task-list__item task-item">
-                <div class="task-item__wrapper">
-                    <div class="task-item__text">
-                        task 1
+        <ul class="task-list" id="task-list">
+            <template id="task-template">
+                <li class="task-list__item task-item">
+                    <div class="task-item__wrapper">
+                        <div class="task-item__text">
+                            task 1
+                        </div>
+                        <div class="task-item__time">
+                            00:00:00
+                        </div>
                     </div>
-                    <div class="task-item__time">
-                        00:00:00
+                    <div class="task-item__controll">
+                        <div class="task-item__btn task-item__play-pause">
+                            <img height="16" width="16" class="task-item__icon" src="./assets/play.svg" alt="">
+                            <span class="task-item__icon-description">Start</span>
+                        </div>
+                        <div class="task-item__btn task-item__done">
+                            <img height="16" width="16" class="task-item__icon" src="./assets/check-square.svg" alt="">
+                            <span class="task-item__icon-description">Done</span>
+                        </div>
+                        <div class="task-item__btn task-item__delete">
+                            <img height="16" width="16" class="task-item__icon" src="./assets/trash.svg" alt="">
+                            <span class="task-item__icon-description">Delete</span>
+                        </div>
                     </div>
-                </div>
-                <div class="task-item__controll">
-                    <div class="task-item__btn task-item__play-pause">
-                        <img height="16" width="16" class="task-item__icon" src="./assets/play.svg" alt="">
-                        <span class="task-item__icon-description">Start</span>
-                    </div>
-                    <div class="task-item__btn task-item__done">
-                        <img height="16" width="16" class="task-item__icon" src="./assets/check-square.svg" alt="">
-                        <span class="task-item__icon-description">Done</span>
-                    </div>
-                    <div class="task-item__btn task-item__delete">
-                        <img height="16" width="16" class="task-item__icon" src="./assets/trash.svg" alt="">
-                        <span class="task-item__icon-description">Delete</span>
-                    </div>
-                </div>
-            </li>
-            <li class="task-list__item task-item">
-                <div class="task-item__wrapper">
-                    <div class="task-item__text">
-                        task 2
-                    </div>
-                    <div class="task-item__time">
-                        00:00:00
-                    </div>
-                </div>
-                <div class="task-item__controll">
-                    <div class="task-item__btn task-item__play-pause">
-                        <img height="16" width="16" class="task-item__icon" src="./assets/play.svg" alt="">
-                        <span class="task-item__icon-description">Start</span>
-                    </div>
-                    <div class="task-item__btn task-item__done">
-                        <img height="16" width="16" class="task-item__icon" src="./assets/check-square.svg" alt="">
-                        <span class="task-item__icon-description">Done</span>
-                    </div>
-                    <div class="task-item__btn task-item__delete">
-                        <img height="16" width="16" class="task-item__icon" src="./assets/trash.svg" alt="">
-                        <span class="task-item__icon-description">Delete</span>
-                    </div>
-                </div>
-            </li>
+                </li>
+            </template>
         </ul>
     </div>
     <div class="add-task-wrapper add-task">

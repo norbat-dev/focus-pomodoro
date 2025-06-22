@@ -57,12 +57,12 @@ class DatabaseManager {
         }); 
     }
 
-    getAllTasks(){
+    getTodayTasks(){
         return new Promise((resolve, reject) => {
-            let query = ``;
-            this.db.get( query, (err) => {
+            let query = `SELECT * FROM tasks WHERE DATE(createdAt) = CURRENT_DATE`;
+            this.db.all( query, (err, rows) => {
                 if (err) return reject(err);
-                resolve();
+                resolve(rows);
             } )
         });
     }
