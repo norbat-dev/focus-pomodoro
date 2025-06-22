@@ -1,8 +1,11 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('node:path')
 const os = require ('os')
+const DatabaseManager = require('./src/db')
 
-function createWindow () {
+let db;
+
+async function createWindow () {
     const win = new BrowserWindow({
         width: 350,
         height: 500,
@@ -13,12 +16,22 @@ function createWindow () {
   win.loadFile('index.html')
 }
 
-app.whenReady().then(() => {
-    createWindow()
+app.whenReady().then(async () => {
+
+    db = new DatabaseManager();
+    try {
+        await db.connect();
+        await db.init();
+    } catch (err) {
+        console.error('Błąd bazy danych:', err);
+    }
 
     ipcMain.handle('get-username', async () => {
         return os.userInfo().username;
     });
+
+    createWindow()
+
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
@@ -27,7 +40,8 @@ app.whenReady().then(() => {
     })
 })
 
-app.on('window-all-closed', () => {
+app.on('window-all-closed', async () => {
+    if (db) await db.close();
     if (process.platform !== 'darwin') {
         app.quit()
     }

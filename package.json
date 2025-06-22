@@ -20,5 +20,8 @@
   "devDependencies": {
     "electron": "^36.4.0",
     "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
   }
 }
