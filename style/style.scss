@@ -15,6 +15,7 @@ body{
         padding: 1rem;
         border-radius: 6px;
         border: 1px solid #414141;
+        height: 1.5rem;
         &:hover{
             background-color: #414141;
             color: white;
@@ -27,6 +28,7 @@ body{
 
 .task-item{
     display: flex;
+    align-items: center;
     $self: &;
     &__text{
 
@@ -56,6 +58,7 @@ body{
         border-radius: 55px;
         margin: 0 2px;
         &:hover{
+            cursor: pointer;
             #{$self}__icon-description{
                 display: block;
             }   
@@ -89,6 +92,9 @@ body{
         padding: .5rem;
         border-radius: 6px;
         border: 1px solid #414141;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     &__input{
         border-radius: 6px;
@@ -106,5 +112,10 @@ body{
         border: none;
         color: white;
         font-weight: 600;
+        border: 2px solid #838383;
+        &:hover{
+            border: 2px solid #ff7300;
+            cursor: pointer;
+        }
     }
 }
