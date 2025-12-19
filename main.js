@@ -42,7 +42,10 @@ app.whenReady().then(async () => {
 
   ipcMain.handle("add-task", async (event, title) => {
     try {
-      await db.addNewTask(title);
+      const tasks = new TaskRepository(db.db);
+      await tasks.addNewTask(title);
+
+      // await db.addNewTask(title);
     } catch (err) {
       console.error("Błąd bazy danych:", err);
     }
